@@ -41,17 +41,9 @@ function Calculadora(language) {
         /><br /><br />
 
         <br />
-
-        numero1: {{ estado.numero1 }}
-        <br />
-        numero2: {{ estado.numero2 }}
-
-        <br />
-
+        <label>Selecione a operação:</label>
+        <br>
         <select v-model="language" name="operacao" id="">
-          Operação
-
-          <option value="">Selecione</option>
           <option value="+">Adição</option>
           <option value="/">Divisão</option>
           <option value="-">Subtração</option>
@@ -68,17 +60,23 @@ function Calculadora(language) {
 </template>
 
 <style scoped>
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+
   height: 97vh;
+}
+
+select{
+  text-align: center;
+  width: 100%;
 }
 </style>
